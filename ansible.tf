@@ -13,7 +13,7 @@ resource "aws_instance" "ansible-master" {
   }
 }
 
-# 
+# ANSIBLE NODE
 resource "aws_instance" "ans-n1" {
   ami           = "ami-022e1a32d3f742bd8"
   instance_type = "t2.micro"
