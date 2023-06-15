@@ -1,6 +1,6 @@
 # Ansible master 
 resource "aws_instance" "ansible-master" {
-  ami           = "ami-022e1a32d3f742bd8"
+  ami           = "ami-002070d43b0a4f171"
   instance_type = "t2.micro"
   subnet_id = aws_subnet.food-pub-sn.id
   key_name = "greenkey"
@@ -15,7 +15,7 @@ resource "aws_instance" "ansible-master" {
 
 # ANSIBLE NODE
 resource "aws_instance" "ans-n1" {
-  ami           = "ami-022e1a32d3f742bd8"
+  ami           = "ami-002070d43b0a4f171"
   instance_type = "t2.micro"
   subnet_id = aws_subnet.food-pub-sn.id
   key_name = "greenkey"
