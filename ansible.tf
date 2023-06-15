@@ -12,3 +12,17 @@ resource "aws_instance" "ansible-master" {
     Name = "Ansible master"
   }
 }
+
+# 
+resource "aws_instance" "ans-n1" {
+  ami           = "ami-022e1a32d3f742bd8"
+  instance_type = "t2.micro"
+  subnet_id = aws_subnet.food-pub-sn.id
+  key_name = "greenkey"
+  user_data = file("install-ansible.sh")
+  private_ip = "10.0.1.22"
+
+  tags = {
+    Name = "Ansible node"
+  }
+}
