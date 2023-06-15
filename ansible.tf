@@ -4,7 +4,7 @@ resource "aws_instance" "ansible-master" {
   instance_type = "t2.micro"
   subnet_id = aws_subnet.food-pub-sn.id
   key_name = "greenkey"
-  vpc_security_groups_ids = [aws_security_group.allow_food.id]
+  vpc_security_group_ids = [aws_security_group.allow_food.id]
   user_data = file("install-ansible.sh")
   private_ip = "172.31.255.255"
 
