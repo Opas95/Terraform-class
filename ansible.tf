@@ -6,7 +6,7 @@ resource "aws_instance" "ansible-master" {
   key_name = "greenkey"
   vpc_security_group_ids = [aws_security_group.allow_food.id]
   user_data = file("install-ansible.sh")
-  private_ip = "172.31.255.255"
+  private_ip = "10.0.1.20"
 
   tags = {
     Name = "Ansible master"
