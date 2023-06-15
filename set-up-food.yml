@@ -28,5 +28,6 @@
     git:
       repo: https://github.com/CeeyIT-Solutions/food-1.git
       dest: /var/www/html
+      force: yes
 ...    
      
