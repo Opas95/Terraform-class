@@ -61,7 +61,7 @@ resource "aws_route_table" "food-pvt-RT" {
 
 
   tags = {
-    Name = "food public RT"
+    Name = "food private RT"
   }
 }
 
